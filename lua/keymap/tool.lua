@@ -134,6 +134,11 @@ local plug_map = {
 	["n|<leader>fb"] = map_cu("Telescope buffers"):with_noremap():with_silent():with_desc("find: Buffer opened"),
 	["n|<leader>fs"] = map_cu("Telescope grep_string"):with_noremap():with_silent():with_desc("find: Current word"),
 	["n|<leader>fd"] = map_cu("Telescope persisted"):with_noremap():with_silent():with_desc("find: Session"),
+	["n|<Leader>s"] = map_cu(
+			"lua local utils=require'telescope.utils'; local git_root, ret=utils.get_os_command_output({'git', 'rev-parse', '--show-toplevel'}, './'); require('telescope.builtin').grep_string({cwd=git_root[1]});"
+		)
+		:with_noremap()
+		:with_silent(),
 
 	-- Plugin: dap
 	["n|<F6>"] = map_callback(function()

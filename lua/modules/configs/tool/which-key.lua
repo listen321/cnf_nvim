@@ -13,7 +13,7 @@ return function()
 				windows = false,
 				nav = false,
 				z = true,
-				g = true,
+				g = false,
 			},
 		},
 
