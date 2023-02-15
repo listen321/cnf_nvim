@@ -83,6 +83,11 @@ editor["lambdalisue/suda.vim"] = {
 	cmd = { "SudaRead", "SudaWrite" },
 	config = require("editor.suda"),
 }
+editor["simrat39/symbols-outline.nvim"] = {
+	lazy = true,
+	event = "VeryLazy",
+	config = require("editor.symbols-outline"),
+}
 
 ----------------------------------------------------------------------
 --                  :treesitter related plugins                    --
