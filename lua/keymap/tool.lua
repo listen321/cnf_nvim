@@ -130,6 +130,13 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("tool: Find word under cursor"),
+		["n|<leader>fs"] = map_callback(function()
+				local opts = vim.fn.getcwd() == vim_path and { additional_args = { "--no-ignore" } } or {}
+				require("telescope-live-grep-args.shortcuts").grep_word_under_cursor(opts)
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("tool: Find word under cursor"),
 		["n|<leader>fg"] = map_callback(function()
 				require("search").open({ collection = "git" })
 			end)
