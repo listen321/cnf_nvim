@@ -6,8 +6,8 @@ completion["neovim/nvim-lspconfig"] = {
 	event = { "CursorHold", "CursorHoldI" },
 	config = require("completion.lsp"),
 	dependencies = {
-		{ "williamboman/mason.nvim" },
-		{ "williamboman/mason-lspconfig.nvim" },
+		{ "mason-org/mason.nvim" },
+		{ "mason-org/mason-lspconfig.nvim" },
 		{ "folke/neoconf.nvim" },
 		{
 			"Jint-lzxy/lsp_signature.nvim",
@@ -38,6 +38,12 @@ completion["nvimtools/none-ls.nvim"] = {
 		"nvim-lua/plenary.nvim",
 		"jay-babu/mason-null-ls.nvim",
 	},
+}
+completion["rachartier/tiny-inline-diagnostic.nvim"] = {
+	lazy = true,
+	event = "VeryLazy",
+	priority = 1000, -- needs to be loaded in first
+	config = require("completion.tiny-inline-diagnostic"),
 }
 completion["hrsh7th/nvim-cmp"] = {
 	lazy = true,
