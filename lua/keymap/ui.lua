@@ -49,13 +49,16 @@ local mappings = {
 		["n|<A-9>"] = map_cr("BufferLineGoToBuffer 9"):with_noremap():with_silent():with_desc("buffer: Goto buffer 9"),
 
 		-- Plugin: smart-splits.nvim
-		["n|<A-h>"] = map_cu("SmartResizeLeft")
+		["n|<C-S-h>"] = map_cu("SmartResizeLeft")
 			:with_silent()
 			:with_noremap()
 			:with_desc("window: Resize -3 horizontally"),
-		["n|<A-j>"] = map_cu("SmartResizeDown"):with_silent():with_noremap():with_desc("window: Resize -3 vertically"),
-		["n|<A-k>"] = map_cu("SmartResizeUp"):with_silent():with_noremap():with_desc("window: Resize +3 vertically"),
-		["n|<A-l>"] = map_cu("SmartResizeRight")
+		["n|<C-S-j>"] = map_cu("SmartResizeDown")
+			:with_silent()
+			:with_noremap()
+			:with_desc("window: Resize -3 vertically"),
+		["n|<C-S-k>"] = map_cu("SmartResizeUp"):with_silent():with_noremap():with_desc("window: Resize +3 vertically"),
+		["n|<C-S-l>"] = map_cu("SmartResizeRight")
 			:with_silent()
 			:with_noremap()
 			:with_desc("window: Resize +3 horizontally"),
