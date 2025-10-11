@@ -19,16 +19,16 @@ return function()
 			q = false,
 			Q = false,
 			["<C-q>"] = false,
-			["<A-j>"] = function(win)
+			["<c-w>-"] = function(win)
 				win:resize("height", -2)
 			end,
-			["<A-k>"] = function(win)
+			["<c-w>+"] = function(win)
 				win:resize("height", 2)
 			end,
-			["<A-h>"] = function(win)
+			["<c-w><"] = function(win)
 				win:resize("width", -2)
 			end,
-			["<A-l>"] = function(win)
+			["<c-w>>"] = function(win)
 				win:resize("width", 2)
 			end,
 		},
@@ -75,7 +75,7 @@ return function()
 				ft = "codecompanion",
 				pinned = true,
 				collapsed = false,
-				size = { width = 0.25 },
+				size = { width = 0.4 },
 				open = "CodeCompanionChat Toggle",
 			},
 		},
