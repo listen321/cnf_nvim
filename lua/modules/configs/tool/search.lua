@@ -64,7 +64,6 @@ return function()
 	-- Tables of pickers
 	local pickers = {
 		file = {
-			{ "Files", file_searcher("files", builtins.find_files, false) },
 			{
 				"Frecency",
 				function()
@@ -74,6 +73,7 @@ return function()
 			{ "Oldfiles", use_fzf and function()
 				fzf.oldfiles(base_opts)
 			end or builtins.oldfiles },
+			{ "Files", file_searcher("files", builtins.find_files, false) },
 			{ "Buffers", builtins.buffers },
 		},
 		pattern = {
