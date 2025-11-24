@@ -188,7 +188,7 @@ settings["gui_config"] = {
 settings["neovide_config"] = {
 	no_idle = false,
 	input_ime = true,
-	fullscreen = true,
+	fullscreen = false,
 	padding_left = 8,
 	confirm_quit = true,
 	cursor_vfx_mode = "torpedo",
@@ -199,6 +199,9 @@ settings["neovide_config"] = {
 	cursor_animation_length = 0.03,
 	cursor_vfx_particle_speed = 20.0,
 	cursor_vfx_particle_density = 5.0,
+	padding_top = 8,
+	opacity = 0.8,
+	normal_opacity = 0.8,
 }
 
 -- Set the dashboard startup image here.
@@ -239,7 +242,7 @@ settings["chat_lang"] = "简体中文"
 -- or you can set it to a command that reads the API key from your password manager.
 -- e.g. "cmd:op read op://personal/OpenAI/credential --no-new
 --- @type string
-settings["chat_api_key"] = "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"
+settings["chat_api_key"] = ""
 
 -- Set the chat models here and use the first entry as default model.
 -- We use `openrouter` as the chat model provider by default (No vested interest).

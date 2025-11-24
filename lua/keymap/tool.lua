@@ -31,6 +31,7 @@ local mappings = {
 
 		-- Plugin: toggleterm
 		["t|<Esc><Esc>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
+		["t|<C-[>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
 		["n|<C-\\>"] = map_cr("ToggleTerm direction=horizontal")
 			:with_noremap()
 			:with_silent()
